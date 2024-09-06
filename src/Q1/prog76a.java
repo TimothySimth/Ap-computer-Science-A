@@ -22,3 +22,15 @@ public class prog76a {
 
     }
 }
+/*
+Please enter a # you hate: 9
+
+
+
+        9
+       x9
+---------
+       81
+x12345679
+999999999
+*/

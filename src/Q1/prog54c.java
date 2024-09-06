@@ -19,3 +19,10 @@ public class prog54c {
     }
 
 }
+/*
+Please enter Radius: 3.712
+
+Area is: 43.28779268096
+Circumference is: 23.32316416
+*/
+
