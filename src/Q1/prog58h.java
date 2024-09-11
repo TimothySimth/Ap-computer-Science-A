@@ -19,9 +19,10 @@ public class prog58h {
         double t = input.nextDouble();
 
         double a = p * (1+ Math.pow(((n*t)/365), ((0.01*r)/n)));
+        double ap = a + p;
 
         System.out.println(a);
-
+        System.out.println(ap);
 
     }
 }
