@@ -16,10 +16,12 @@ public class LP43 {
         else if (dozens < 11) costperdozen = 0.40;
         else costperdozen = 0.35;
 
-        double cost = (dozens * costperdozen) + (eggs * (costperdozen * (1/12)));
+        double cost = dozens * costperdozen;
+        double costs = costperdozen * eggs * 1/12;
+        cost += costs;
 
 
         System.out.println("Price per copy: " + costperdozen);
-        System.out.printf("Total is: %.2f\n", cost);
+        System.out.println("Total is: " + cost);
     }
 }
