@@ -8,7 +8,7 @@ public class LP46 {
         int num3 = (int)(Math.random() * (4 - 1)) + 1;
         String opp = "";
 
-        if (num3 > 2) opp += "+";
+        if (num3 > 2) opp += 't';
         System.out.println(opp);
     }
 }
