@@ -43,3 +43,7 @@ public class LP46 {
 
     }
 }
+/*
+What does 1 - 8 = -7
+Correct
+*/

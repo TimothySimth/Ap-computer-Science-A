@@ -33,5 +33,17 @@ public class Lp410 {
 
 }
 /*
+Rectangular Prism
+Enter the Length: 3
+Enter the Width: 4
+Enter the Hight: 5
+The Volume is: 60
 
+Sphere
+Enter the Radius: 3
+The Volume is: 14.14
+
+Cube
+Enter the Side length: 4
+The Volume is: 64
 */

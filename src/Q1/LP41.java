@@ -24,5 +24,12 @@ public class LP41 {
 
 
 
-    }
-}
+    
+    }}
+
+
+/*
+Enter a number eggs: 18
+Price per copy: 0.5
+Total is: 0.75
+*/

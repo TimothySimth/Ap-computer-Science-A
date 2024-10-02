@@ -25,5 +25,6 @@ public class StrInt7 {
     }
 }
 /*
-
+Enter a str: Cool beans
+# of Vowels: 4          # of Constants: 5
 */

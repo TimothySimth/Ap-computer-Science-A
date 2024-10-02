@@ -25,3 +25,8 @@ public class LP43 {
         System.out.println("Total is: " + cost);
     }
 }
+/*
+Enter a number eggs: 18
+Price per copy: 0.5
+Total is: 0.75
+*/
