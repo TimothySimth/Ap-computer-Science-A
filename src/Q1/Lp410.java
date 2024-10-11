@@ -19,9 +19,9 @@ public class Lp410 {
 
         System.out.print("\nSphere\nEnter the Radius: ");
         int radius = input.nextInt();
-        final double pi = 3.1415;
+        final double pi = 3.14159;
         double shervol = (pi*(radius*radius*radius)) / 6;
-        System.out.printf("The Volume is: %.2f\n", shervol);
+        System.out.printf("The Volume is: %.3f\n", shervol);
 
         System.out.print("\nCube\nEnter the Side length: ");
         int sidelength = input.nextInt();

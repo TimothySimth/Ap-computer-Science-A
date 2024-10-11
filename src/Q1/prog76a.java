@@ -16,7 +16,7 @@ public class prog76a {
         int mun2 = 12345679 * mun1;
 
 
-        System.out.println("        9\n       x" + num1 + "\n---------\n       " + mun1 + "\nx12345679\n" + mun2);
+        System.out.println("        9\n       x" + num1 + "\n---------\n       " + mun1 + "\nx12345679\n" + mun2 + "\nSURPRISE!!!!!");
 
 
 
