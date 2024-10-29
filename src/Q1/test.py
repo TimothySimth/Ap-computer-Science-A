@@ -2,7 +2,7 @@ import openai
 from fuzzywuzzy import fuzz
 from fuzzywuzzy import process
 
-openai.api_key = 'sk-jS8zYVWyAtNF1ucb84PhZw7PHXmtGTg27ycTMmRTo-T3BlbkFJJBBxgEaE7KqIHZ68OsFfVMb6A0H5CVG3AEqVn2ku4A'
+
 messages = [ {"role": "system", "content": "You are a intelligent assistant."} ]
 
 while True:
