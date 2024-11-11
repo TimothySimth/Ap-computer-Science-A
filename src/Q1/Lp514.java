@@ -9,7 +9,7 @@ public class Lp514 {
             int dice2 = (int)(Math.random() * (6 - 1)) + 1;
             lcv ++;
             int sum = dice1 + dice2;
-            System.out.println(dice1 + "\t" +dice2 + "\t" +sum);
+            System.out.println(dice1 + "\t\t" +dice2 + "\t\t" +sum);
             
 
 

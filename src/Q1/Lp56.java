@@ -15,7 +15,7 @@ public class Lp56 {
         if (secondnum <= 1) secondnum = 0;
         if (thridnum  <= 1) thridnum  = 0;
         int sum = (int) (firstNum + secondnum + thridnum);
-        System.out.printf("%d\n%d\n%d\n%d\n",firstNum, secondnum, thridnum, sum);
+        System.out.printf("%d\n%d\n%d\nthe sum is: %d\n",firstNum, secondnum, thridnum, sum);
 
 
 

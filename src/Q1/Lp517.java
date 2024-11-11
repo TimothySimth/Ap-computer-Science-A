@@ -5,23 +5,24 @@ import java.util.Scanner;
 public class Lp517 {
     public static void main(String[] args) {
         String secretpassword = "Password";
-        int lcv = 0;
         Scanner input = new Scanner(System.in);
         System.out.print("Welcome ");
         
-        while (lcv < 3) {
+        for (int lcv=1;lcv < 4; lcv++) {
             System.out.print("Enter Password: ");
             String userinput = input.nextLine();
-            lcv++;
-            if (secretpassword.equals(userinput)) System.out.println("Correct");
-            if (lcv == 3) System.out.println("Access Denied");
-            else System.out.println("Wrong");
+            if (secretpassword.equals(userinput)) {
+                lcv += 10;
+                System.out.println("Correct, Access Granted");
+            }
+            else if (lcv == 3) System.out.println("Access Denied");
+            else if (lcv <= 3)System.out.println("Wrong");
         }
     }
 
 }
 /*
-Welcome Enter Password: Programer
+Welcome Enter Password: Programmer
 Wrong
 Enter Password: 45gsd%^
 Wrong
