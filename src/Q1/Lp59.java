@@ -2,10 +2,8 @@ package Q1;
 
 public class Lp59 {
     public static void main(String[] args) {
-        int lcv = 0;
         System.out.println("^1\t^2\t^3\t^4\t^5");
-        while (lcv < 6) {
-            lcv++;
+        for (int lcv = 0; lcv < 6; lcv++) {
             System.out.println(lcv + "\t" + lcv*lcv + "\t" + (int) (Math.pow(lcv, 3)) + "\t" + (int) (Math.pow(lcv, 4)) + "\t" + (int) (Math.pow(lcv, 5)));
             
         }
