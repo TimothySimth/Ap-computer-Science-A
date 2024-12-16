@@ -9,15 +9,9 @@ public class MSOE2016_1 {
         System.out.print("Enter a word: ");
         String userword = input.nextLine().toLowerCase();
 
-        int check = 0;
-        int lcv = 0;
-        while (lcv < userword.length()) {
-                check ++;
-                lcv   ++;
 
-            lcv++;
-        }
-        if (check == userword.length()-1) System.out.println(userword + " is a palindrome.");
+
+        //if (word.equals(userword)) System.out.println(userword + " is a palindrome.");
         System.out.println(userword + " is not a palindrome.");
     }
 
