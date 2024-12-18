@@ -34,6 +34,6 @@ public class lp3_10class {
     public double getTax()        {return myTax;   }
     public double getTotal()      {return myTotal; }
     public double getCost()       {return myCost;  }
-    public double getChange()   {return myChange;}
+    public double getChange()     {return myChange;}
 
 }
