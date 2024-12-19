@@ -24,11 +24,12 @@ public class prog214cClass {
         if (myTypeGas.equals("H"))     { myGasCost = 1.429; myTypeGas = "High Octane"; }
         if (myWantCarWash.equals("Y")) {
             myCarWash = 2.0;
-            if (myGasGallons >= 20) myGasGallons = 0.0;
+            if (myGasGallons >= 20) myCarWash = 0.0;
             else {
                 int temp = (int)myGasGallons;
-                for (double i = temp; i > 0; i--)
-                    myCarWash *= 0.1;
+                if (myGasGallons > 10)
+                    for (double i = temp; i > 0; i--)
+                        myCarWash *= 0.1;
             }
         }
         myCost = myGasCost * myGasGallons;
