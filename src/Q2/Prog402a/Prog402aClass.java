@@ -6,14 +6,11 @@ public class Prog402aClass {
     static double myAverage = 0.0;
 
     public Prog402aClass(int id, int score) {
-        myID = id;
-        myScore = score;
-        myAverage += score;
+
+
     }
 
-    public int getId() { return myID;}
-    public double getAverage() { return  myAverage; }
-    public int getScore() { return myScore; }
+
 
 
 
