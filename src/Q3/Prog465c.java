@@ -11,6 +11,9 @@ public class Prog465c {
             int a = file.nextInt();
             int b = file.nextInt();
             int[][] mat = new int[a][b];
+
+
+
             for (int r = 0; r < mat.length; r++) {
                 for (int c = 0; c < mat[r].length; c++) {
                     mat[r][c] = file.nextInt();
