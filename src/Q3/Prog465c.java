@@ -31,8 +31,8 @@ public class Prog465c {
 
             for (int r = 0; r < mat.length; r++) {
                 for (int c = 0; c < mat[r].length; c++) {
-                    if (r == mat.length || r == 0) tot += mat[r][c];
-                    else if (c == 4 || c == 0) tot += mat[r][c];
+                    if (r == mat.length-1 || r == 0) tot += mat[r][c];
+                    else if (c == mat[0].length-1 || c == 0) tot += mat[r][c];
 
                     }
 
