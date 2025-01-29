@@ -15,9 +15,11 @@ public class Prog470b {
             while (file.hasNext()) {
                 int temp = file.nextInt();
                 arr[col][row] = temp;
-
-
+                if (row == 3) {row = 0; col++;}
+                row++;
             }
+
+
         } catch (IOException e) {
             System.out.println("Error: " + e);
         }

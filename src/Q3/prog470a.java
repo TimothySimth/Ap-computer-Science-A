@@ -20,7 +20,7 @@ public class prog470a {
             }
             
 
-            System.out.println(Arrays.toString());
+            //System.out.println(Arrays.toString());
 
         } catch (IOException e) {
             System.out.println("Error: " + e);
