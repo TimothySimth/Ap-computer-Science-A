@@ -47,3 +47,11 @@ public class Prog465c {
         }
     }
 }
+/*
+Original Matrix:
+100 195 182 225
+83 125 235 67
+129 42 100 750
+
+The total of the edges is: 1873
+*/

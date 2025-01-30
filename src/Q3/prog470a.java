@@ -29,15 +29,15 @@ public class prog470a {
                 System.out.println();
             }
 
-           //for (int c = 0; c < mat.length; c++) {
-           //    for (int r = 0; r < mat[c].length; r++) {
-           //        int temp = 0;
-           //        if (r == mat.length-1 || r == 0) temp += mat[r][c];
-           //        else if (c == mat[0].length-1 || c == 0) temp += mat[r][c];
+           for (int c = 0; c < mat.length; c++) {
+               for (int r = 0; r < mat[c].length; r++) {
+                   int temp = 0;
+                   if (r == mat.length-1 || r == 0) temp += mat[r][c];
+                   else if (c == mat[0].length-1 || c == 0) temp += mat[r][c];
 
-           //    }
+               }
 
-           //}
+           }
 
 
         } catch (IOException e) {
