@@ -44,6 +44,7 @@ public class prog702p {
             int furCount = 0;
             int stepCount = 0;
             int wordCount = 0;
+            String letters = "";
 
             for (animal a : list) {
                 if (a instanceof hicca) {
@@ -55,9 +56,29 @@ public class prog702p {
                 } else if (a instanceof Beeper) {
                     avrWordLen = ((Beeper) a).getFavWord().length();
                     wordCount++;
+                    ((Beeper) a).calcMostUsedLetter();
+                    letters += ((Beeper) a).getfavLetter();
 
                 }
             }
+
+            int[] nums = new int[27];
+            String abcs = "abcdefghijklmnopqrstuvwxyz";
+
+            for (int i = 0; i < abcs.length()-1; i++) {
+                int temp = 0;
+                for (int i2 = 0; i2<letters.length()-1; i2++){
+                    if (abcs.substring(i, i+1).equals(letters.substring(i2,i2+1))) temp += 1;
+                }
+
+                nums[i] = temp;
+            }
+
+            String strTemp = "";
+            int temp = 0;
+
+            for (int lcv = 0; lcv < nums.length-1; lcv ++) if (nums[lcv] > temp) { strTemp = abcs.substring(lcv,lcv+1); temp = nums[lcv]; }
+
             avrFurCost /= furCount;
             avrStepsTaken /= stepCount;
             avrWordLen /= wordCount;
@@ -69,8 +90,8 @@ public class prog702p {
 
 
             System.out.printf("The total number of animals is %d. \nThe number of Hicca %d. \nThe average value of the Hicca fur is: $%.1f\n" +
-                              "The number of Wallies %d. \nThe average number of steps taken by the Wallies is:  %.1f\n" +
-                              "The number of Beepers %d. \nThe average size of the Beepers words is:  %.1f\n", totAnimals, furCount, avrFurCost, stepCount, avrStepsTaken, wordCount, avrWordLen);
+                               "The number of Wallies %d. \nThe average number of steps taken by the Wallies is:  %.1f\n" +
+                             "The number of Beepers %d. \nThe average size of the Beepers words is:  %.1f\nThe most used letter in the beepers favorite word is: %s", totAnimals, furCount, avrFurCost, stepCount, avrStepsTaken, wordCount, avrWordLen,strTemp);
 
         } catch (IOException e) {
             System.out.println("Error: " + e);
