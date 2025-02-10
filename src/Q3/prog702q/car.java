@@ -1,6 +1,7 @@
-package Q3;
+package Q3.prog702q;
 
-public class car extends vehicles{
+
+public class car extends vehicles {
     int myCost;
     public car(String n, int w,int cost){
         super(n, w);
