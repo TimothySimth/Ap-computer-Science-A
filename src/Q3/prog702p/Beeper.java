@@ -1,8 +1,8 @@
 package Q3.prog702p;
 
-public class Beeper extends animal{
+public class Beeper extends animal{ 
     String myFavWord;
-    String myFavLetter;
+    String myfavLetter;
 
     public Beeper(String n, String w, String fCost) {
         super(n, w);
@@ -27,8 +27,12 @@ public class Beeper extends animal{
 		
 	    for (int lcv = 0; lcv < nums.length-1; lcv ++) if (nums[lcv] > temp) { strTemp = letters.substring(lcv,lcv+1); temp = nums[lcv]; }
 
-	    myFavLetter = strTemp;
-	    }
+	    myfavLetter = strTemp;
+	}
+
+
     public String getFavWord() { return myFavWord; }
-    public String getMostUsedLetter() (return myFavLetter; )
+
+
+    public String getMostUsedLetter() { return myfavLetter; }
 }
