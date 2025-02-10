@@ -55,12 +55,18 @@ public class prog702p {
                 } else if (a instanceof Beeper) {
                     avrWordLen = ((Beeper) a).getFavWord().length();
                     wordCount++;
+
                 }
             }
             avrFurCost /= furCount;
             avrStepsTaken /= stepCount;
             avrWordLen /= wordCount;
             int totAnimals = furCount + stepCount + wordCount;
+
+
+
+
+
 
             System.out.printf("The total number of animals is %d. \nThe number of Hicca %d. \nThe average value of the Hicca fur is: $%.1f\n" +
                               "The number of Wallies %d. \nThe average number of steps taken by the Wallies is:  %.1f\n" +
