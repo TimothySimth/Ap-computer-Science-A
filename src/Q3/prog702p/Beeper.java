@@ -1,17 +1,15 @@
 package Q3.prog702p;
 
-import java.util.Locale;
-
 public class Beeper extends animal{
     String myFavWord;
 
-    public Beeper(String n, String w, String fWord) {
+    public Beeper(String n, String w, String fCost) {
         super(n, w);
-        myFavWord = fWord;
+        myFavWord = fCost;
 
     }
-
-
-
+    public String calcMostUsedWord() {
+        return "s";
+    }
     public String getFavWord() { return myFavWord; }
 }
