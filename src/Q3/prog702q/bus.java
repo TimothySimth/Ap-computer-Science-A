@@ -8,6 +8,6 @@ public class bus extends vehicles {
         myHomeCity = homeCity;
     }
 
-
+    public String getHomeCity() { return myHomeCity; }
 
 }

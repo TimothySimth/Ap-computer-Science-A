@@ -13,4 +13,5 @@ public class truck extends vehicles{
     public void calcCost(){ myCost -= myMiles * 0.25; }
 
     public double getCost() { return myCost; }
+    public int getMiles() { return myMiles; }
 }
