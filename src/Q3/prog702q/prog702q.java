@@ -46,7 +46,7 @@ public class prog702q {
             int numOfTruckTires = 0;
             int numOfBusTires = 0;
             String longestHomeName = "";
-            double lowestTruckcost = 100000;
+            double lowestTruckCost = 1000000;
             int totalCarCost = 0;
             double totalAllVehiclesCost = 0;
 
@@ -59,7 +59,7 @@ public class prog702q {
                 } else if (a instanceof truck) {
                     ((truck) a).calcCost();
                     totalAllVehiclesCost += ((truck) a).getCost();
-                    if (((truck) a).getCost() < lowestTruckcost) lowestTruckcost = ((truck) a).getCost();
+                    if (((truck) a).getCost() < lowestTruckCost) lowestTruckCost = ((truck) a).getCost();
                     numOfVehicles++;
                     numOfTruckTires += ((truck) a).getTires();
                 } else if (a instanceof bus) {
@@ -78,7 +78,7 @@ public class prog702q {
                     "The truck has the least value is: %.2f\n" +
                     "The total number of tires in each of the three classes of vehicles are as follows car: %d truck: %d bus: %d",
                     numOfVehicles, totalCarCost, totalAllVehiclesCost, longestHomeName,
-                    lowestTruckcost, numOfCarTires, numOfTruckTires, numOfBusTires);
+                    lowestTruckCost, numOfCarTires, numOfTruckTires, numOfBusTires);
 
         } catch (IOException e) {
             System.out.println("Error: " + e);}

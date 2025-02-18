@@ -100,3 +100,13 @@ public class prog702p {
         }
     }
 }
+/*
+The total number of animals is 15.
+The number of Hicca 6.
+The average value of the Hicca fur is: $3.1
+The number of Wallies 5.
+The average number of steps taken by the Wallies is:  63.2
+The number of Beepers 4.
+The average size of the Beepers words is:  1.0
+The most used letter in the beepers favorite word is: a
+*/
