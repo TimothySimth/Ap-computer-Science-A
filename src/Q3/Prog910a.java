@@ -18,5 +18,6 @@ public class Prog910a {
             System.out.print("\nEnter number to convert to binary: ");
             num = input.nextInt();
         }
+
     }
 }
