@@ -12,6 +12,9 @@ public class Cow extends Animal{
     public double value(double cornCost, double hayCost){
         return myMilk * MILK_PRICE_LB - getFeedCost(cornCost, hayCost);
     }
+    public double calcValue(){
+        return myMilk * MILK_PRICE_LB;
+    }
 
     public double getMilk()      { return myMilk; }
     public double getMilkPrice() { return MILK_PRICE_LB; }

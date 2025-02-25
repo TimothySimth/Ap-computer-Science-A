@@ -113,3 +113,10 @@ public class Prog505w {
         }
     }
 }
+/*
+Horse MarkMark makes the least money
+The total cumulative weight of all the animals is: 32790
+The total income of all the animals is: 193.86
+Is there enough food for all the animals: true
+Cow Mary makes the most money.
+*/
