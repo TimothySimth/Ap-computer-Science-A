@@ -19,6 +19,10 @@ public abstract class Animal {
     public int getWeight()    { return myWeight; }
     public int getNumCorn()   { return myNumCorn; }
     public int getNumHayBales() { return myNumHayBales; }
+    public void setName(String name)  { myName = name; }
+    public void setWeight(int weight)  { myWeight = weight; }
+    public void setNumCorn(int corn)  { myNumCorn = corn; }
+    public void setNumHayBales(int hay)  { myNumHayBales = hay; }
 
     public double getFeedCost(double cornCost, double hayCost)
         { return (myNumCorn * cornCost) + (myNumHayBales * hayCost); }

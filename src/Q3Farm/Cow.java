@@ -18,4 +18,6 @@ public class Cow extends Animal{
 
     public double getMilk()      { return myMilk; }
     public double getMilkPrice() { return MILK_PRICE_LB; }
+
+    public void setMilk(int milk)  { myMilk = milk; }
 }

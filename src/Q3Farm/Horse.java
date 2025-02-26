@@ -21,12 +21,13 @@ public class Horse extends Animal {
     public String getName() {
         return super.getName() + super.getName();
     }
-
     public int getNumRides() {
         return myNumRides;
     }
-
     public double getRideCost() {
         return myRideCost;
     }
+
+    public void setNumRides(int rides)  { myNumRides = rides; }
+    public void setMyRideCost(double rideCost)  { myRideCost = rideCost; }
 }
