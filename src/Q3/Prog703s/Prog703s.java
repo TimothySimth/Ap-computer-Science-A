@@ -14,15 +14,15 @@ import java.util.Scanner;
 public class Prog703s {
     public static void main(String[] args) {
         try {
-            Scanner file = new Scanner(new File("Langdat/prog703s.dat"));
+            Scanner file = new Scanner(new File("Langdat/prog703s.txt"));
 
-            List<Computers> list = new ArrayList<Computers>();
+            List<Computers> list = new ArrayList<>();
 
             int num = file.nextInt();
-            while (num != 99) {
+            while (file.hasNext()) {
                 String n = file.next();
                 int number = file.nextInt();
-                int v = file.nextInt();
+                double v = file.nextDouble();
 
                 if (num == 1) {
                     String color = file.next();
@@ -69,3 +69,8 @@ public class Prog703s {
         }
     }
 }
+/*
+There are 1 Macs that are Gold or Green.
+There are 2 Windows on version 7.0.
+There are 4 Linux with a secret number of 5.
+*/

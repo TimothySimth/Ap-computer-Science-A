@@ -15,7 +15,7 @@ public class prog702p {
         try {
             Scanner file = new Scanner(new File("Langdat/prog701g.dat"));
 
-            List<animal> list = new ArrayList<animal>();
+            List<animal> list = new ArrayList<>();
 
             int num = file.nextInt();
             while (num != 99) {

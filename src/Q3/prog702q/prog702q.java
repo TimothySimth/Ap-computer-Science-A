@@ -16,7 +16,7 @@ public class prog702q {
         try {
             Scanner file = new Scanner(new File("Langdat/prog702q.txt"));
 
-            List<vehicles> list = new ArrayList<vehicles>();
+            List<vehicles> list = new ArrayList<>();
 
 
 
