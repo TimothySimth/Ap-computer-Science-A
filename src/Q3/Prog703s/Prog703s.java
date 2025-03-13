@@ -1,19 +1,8 @@
-package Q3.Prog703s;
-
-import Q3.prog702q.bus;
-import Q3.prog702q.car;
-import Q3.prog702q.truck;
-import Q3.prog702q.vehicles;
-
-import java.io.File;
+package Q3.Prog703s; import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
-
-public class Prog703s {
-    public static void main(String[] args) {
-        try {
+import java.util.Scanner; public class Prog703s { public static void main(String[] args) { try {
             Scanner file = new Scanner(new File("Langdat/prog703s.txt"));
 
             List<Computers> list = new ArrayList<>();
@@ -66,10 +55,7 @@ public class Prog703s {
 
         } catch (IOException e) {
             System.out.println("Error: " + e);
-        }
-    }
-}
-/*
+        }} } /*
 There are 1 Macs that are Gold or Green.
 There are 2 Windows on version 7.0.
 There are 4 Linux with a secret number of 5.
