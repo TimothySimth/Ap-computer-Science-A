@@ -3,6 +3,10 @@ package Q4.LibraryManagementLab;
 public class Book extends Media {
     private String author;
 
+    public Book(String title, String isbn, String author) {
+        super();
+    }
+
     // TODO: Implement constructor (title, isbn, author); call super constructor
 
     public String getAuthor() { return author; }
@@ -14,5 +18,13 @@ public class Book extends Media {
                 ", isbn='" + getIsbn() + '\'' +
                 ", author='" + author + '\'' +
                 '}';
+    }
+
+    private String getIsbn() {
+        return null;
+    }
+
+    private String getTitle() {
+        return null;
     }
 }
