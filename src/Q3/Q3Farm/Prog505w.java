@@ -1,8 +1,4 @@
-package Q3Farm;
-
-import Q3Farm.Animal;
-import Q3Farm.Cow;
-import Q3Farm.Horse;
+package Q3.Q3Farm;
 
 import java.io.File;
 import java.io.IOException;

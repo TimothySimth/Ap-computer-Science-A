@@ -1,4 +1,4 @@
-package Q3Farm;
+package Q3.Q3Farm;
 
 public abstract class Animal {
     private String myName;

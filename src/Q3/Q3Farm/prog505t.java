@@ -1,4 +1,4 @@
-package Q3Farm;
+package Q3.Q3Farm;
 
 import java.io.File;
 import java.io.IOException;

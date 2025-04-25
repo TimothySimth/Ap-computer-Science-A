@@ -1,4 +1,4 @@
-package Q3Farm;
+package Q3.Q3Farm;
 
 public class Cow extends Animal{
     private static final double MILK_PRICE_LB = 0.20;
