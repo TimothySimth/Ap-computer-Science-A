@@ -8,6 +8,7 @@ public class Transaction {
 
     // TODO: Implement constructor (isbn, patronId, checkoutDate); set returnDate to null by default
 
+
     // TODO: Implement getters and setters
 
     @Override

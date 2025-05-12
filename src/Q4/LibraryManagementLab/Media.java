@@ -1,12 +1,16 @@
 package Q4.LibraryManagementLab;
 
 public abstract class Media {
-    private String title;
-    private String isbn;
+    private String myTitle;
+    private String myIsbn;
     private boolean isCheckedOut;
 
-    // TODO: Implement constructor (title, isbn)
+    public Media(String title, String isbn){
+        myTitle = title;
+        myIsbn = isbn;
+    }
 
-    // TODO: Implement getter methods
+    public String getTitle() { return myTitle; }
+    public String getIsbn() { return myIsbn; }
     public void setCheckedOut(boolean checkedOut) { isCheckedOut = checkedOut; }
 }
