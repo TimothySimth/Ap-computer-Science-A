@@ -10,6 +10,7 @@ public interface LibrarySystem {
     void viewMostRecentTransaction(String isbn);
     boolean checkoutBook(String isbn, String patronId);
     boolean checkinBook(String isbn, String patronId);
+
     Book findClosestBook(String title);
     Book searchBookByTitle(String title);
     Book searchBookByAuthor(String author);

@@ -1,6 +1,7 @@
 package Q4.LibraryManagementLab;
 
-public class Book extends Media {
+
+public class Book extends Media implements Comparable{
     private String myAuthor;
 
     public Book(String title, String isbn, String author) {
@@ -22,4 +23,13 @@ public class Book extends Media {
                 '}';
     }
 
+    @Override
+    public int compareTo(Book other) {
+        return this.getTitle().compareTo(other.getTitle());
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        return 0;
+    }
 }
