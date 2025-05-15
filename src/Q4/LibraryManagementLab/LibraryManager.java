@@ -32,7 +32,7 @@ public class LibraryManager {
         return new ArrayList<>();
     }
 
-    // TODO: Implement main program; make a new Library object, load the catalog,
+
     // add each book from the catalog to the library, then display the menu
     public static void main(String[] args) {
         ArrayList<Book> books = loadCatalog();

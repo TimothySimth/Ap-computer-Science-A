@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Locale;
 
 public class BinarySearchUtil {
-    // TODO: Implement binary search method (takes in ArrayList) using recursion for searching books by title (required) or author
+
     private ArrayList<Book> myBooks;
     private String myThing;
 
