@@ -6,6 +6,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Collections;
 
+
 public class Library implements LibrarySystem {
     private ArrayList<Book> books;
     private ArrayList<Patron> patrons;
@@ -21,19 +22,24 @@ public class Library implements LibrarySystem {
     // Implement interface methods
     @Override
     public void addBook(Book book) {
-        for (int lcv = 0; lcv < books.size()-1; lcv++){
+        for (int lcv = 0; lcv < books.size(); lcv++){
             if (books.get(lcv).compareTo(book) <= 0) {
                 books.add(lcv, book);
                 System.out.println("Book added successfully.");
+                return;
             }
-            else if (lcv == books.size()-2) books.add(lcv, book);
         }
+        System.out.println("Book added unsuccessfully.");
     }
     @Override
     public void removeBook(String isbn) {
         int index = findIndexOfISBN(isbn);
-        if (index != -1)
+        if (index != -1) {
             books.remove(index);
+            System.out.println("Book removed successfully.");
+            return;
+        }
+        System.out.println("Book removed unsuccessfully.");
     }
 
     @Override
@@ -66,7 +72,8 @@ public class Library implements LibrarySystem {
             transactions.get(findIndexOfISBNTrans(isbn)).setReturnDate(returnDate);
             System.out.println("Book checked in successful.");
         }
-        System.out.println("Book checked in unsuccessful.");
+        else
+            System.out.println("Book checked in unsuccessful.");
     }
     // Other methods...
 
@@ -85,8 +92,7 @@ public class Library implements LibrarySystem {
     public boolean checkoutBook(String isbn, String patronId) {
         int indexOfBook = findIndexOfISBN(isbn);
         int indexOfPatron = findIndexOfID(patronId);
-        if (books.get(indexOfBook).getCheckedOut() == false){
-            books.get(indexOfBook).setCheckedOut(true);
+        if (!books.get(indexOfBook).getCheckedOut()){
             patrons.get(indexOfPatron).checkOutBook(books.get(indexOfBook));
             return true;
         }
@@ -99,7 +105,6 @@ public class Library implements LibrarySystem {
         for (Transaction tran : transactions) {
             if (tran.getIsbn().equals(isbn) && tran.getPatronId().equals(patronId)) {
                 patrons.get(findIndexOfID(patronId)).checkInBook(books.get(findIndexOfISBN(isbn)));
-                books.get(findIndexOfISBN(isbn)).setCheckedOut(false);
                 return true;
             }
         }
@@ -110,14 +115,20 @@ public class Library implements LibrarySystem {
 
     @Override
     public Book findClosestBook(String title) {
-        // TODO: Search for the closest book title using .toLowerCase() and .contains(); return the closest book or null
+        for (Book i : books) {
+            if (i.getTitle().toLowerCase().contains(title)) {
+                return new Book(i.getTitle(), i.getIsbn(), i.getAuthor());
+            }
+        }
         return null;
     }
 
     @Override
     public Book searchBookByTitle(String title) {
         BinarySearchUtil book = new BinarySearchUtil(books, title);
-        return book.goHookTitle(0, books.size()-1);
+        var o = book.goHookTitle(0, books.size()-1);
+        if (o != null) return o;
+        return findClosestBook(title);
     }
 
     @Override
@@ -129,24 +140,39 @@ public class Library implements LibrarySystem {
 
     public int findIndexOfISBN(String isbn) {
         int index = -1;
-        for (int i =0; i < books.size()-1; i++){
-            if (books.get(i).getIsbn().equals(isbn)) index = i;
+        for (int i =0; i < books.size(); i++){
+            if (books.get(i).getIsbn().equals(isbn)) index += 1;
         }
         return index;
     }
     public int findIndexOfID(String id) {
         int index = -1;
-        for (int i =0; i < books.size()-1; i++){
-            if (patrons.get(i).getPatronId().equals(id)) index = i;
+        for (int i = 0; i < patrons.size(); i++){
+            if (patrons.get(i).getPatronId().equals(id)) index += 1;
         }
         return index;
     }
     public int findIndexOfISBNTrans(String isbn){
         int index = -1;
-        for (int i =0; i < transactions.size()-1; i++){
-            if (transactions.get(i).getIsbn().equals(isbn)) index = i;
+        for (int i = 0; i < transactions.size(); i++){
+            if (transactions.get(i).getIsbn().equals(isbn)) index += 1;
         }
         return index;
+    }
+    public void printPatrons() {
+        for (Patron p : patrons){
+            System.out.println("Name: " + p.getName() + " Id: " + p.getPatronId());
+        }
+    }
+    public void printBooks() {
+        for (Book b : books) {
+            System.out.println(b);
+        }
+    }
+    public void printTrans() {
+        for (Transaction t : transactions){
+            System.out.println(t);
+        }
     }
 
 

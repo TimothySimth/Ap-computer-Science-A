@@ -18,7 +18,7 @@ public class LibraryManager {
             while (file.hasNextLine()) {
                 String[] bookData = file.nextLine().split(";");
                 String isbn = bookData[0];
-                String title = bookData[1].toLowerCase();
+                String title = bookData[1];
                 String author = bookData[2];
                 Book book = new Book(title, isbn, author);
                 books.add(book);
@@ -40,6 +40,7 @@ public class LibraryManager {
         ArrayList<Transaction> transactions = new ArrayList<>();
         Library library = new Library(books, patrons, transactions);
         Scanner input = new Scanner(System.in);
+        int chose = 0;
         while (true){
             System.out.println("1. Add patron\n" +
                                "2. Add Book\n" +
@@ -49,7 +50,8 @@ public class LibraryManager {
                                "6.Search Book\n" +
                                "7. Search Book Transaction\n" +
                                "8. Exit\n\n");
-            int chose = input.nextInt();
+            if (input.hasNextInt())
+                chose = input.nextInt();
             if (chose == 1){
                 System.out.print("Enter Name: ");
                 String name = input.next();
@@ -63,6 +65,7 @@ public class LibraryManager {
                 String isbn = input.next();
                 System.out.print("Enter Title: ");
                 String title = input.next();
+                input.nextLine();
                 System.out.print("Enter author: ");
                 String author = input.next();
                 Book book = new Book(title, isbn, author);
@@ -89,18 +92,23 @@ public class LibraryManager {
             }
             else if (chose == 6){
                 System.out.print("Enter Title: ");
-                String title = input.next();
+                String title = input.next().toLowerCase();
                 Book book = library.searchBookByTitle(title);
-                System.out.println("Book Found: " + book.toString());
+                if (book != null)
+                    System.out.println("Book Found: " + book + "\n");
+                else System.out.println("Book Not Found.");
             }
             else if (chose == 7){
                 System.out.print("Enter ISBN: ");
                 String isbn = input.next();
-                System.out.println("Book");
+                library.viewMostRecentTransaction(isbn);
             }
             else if (chose == 8){
                 return;
-            } else
+            } else if (chose == 154){
+                library.printPatrons();
+            }
+            else
                 System.out.println("Invalid input");
         }
 

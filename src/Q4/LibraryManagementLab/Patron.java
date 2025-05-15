@@ -10,6 +10,7 @@ public class Patron {
     public Patron(String name, String patronId){
         myName = name;
         myPatronId = patronId;
+        checkedOutBooks = new ArrayList<>();
     }
 
     // Basic getters
@@ -20,10 +21,10 @@ public class Patron {
 
     public void checkInBook(Book book){
         checkedOutBooks.remove(book);
-        book.setCheckedOut(false);
+        book.CheckInBook();
     }
     public void checkOutBook(Book book){
         checkedOutBooks.add(book);
-        book.setCheckedOut(true);
+        book.CheckedOutBook();
     }
 }

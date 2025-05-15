@@ -13,18 +13,21 @@ public class BinarySearchUtil {
         myThing = thing.toLowerCase();
     }
 
-    public Book goHookTitle(int low, int high){
+    public Book goHookTitle(int low, int high) {
+        if (low > high) return null;
         int mid = (low+high)/2;
         if (myBooks.get(mid).getTitle().compareTo(myThing) == 0){
             return myBooks.get(mid);
         }
-        else if (myBooks.get(mid).getTitle().compareTo(myThing) < 0){
+        if (myBooks.get(mid).getTitle().compareTo(myThing) < 0){
             return goHookTitle(low,mid-1);
         }
         else {
             return goHookTitle(mid+1,high);
         }
     }
+
+
     public Book goHookAuthor(int low, int high){
     int mid = (low+high)/2;
     if (myBooks.get(mid).getAuthor().equals(myThing)){
