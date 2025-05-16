@@ -25,27 +25,27 @@ public class Library implements LibrarySystem {
         for (int lcv = 0; lcv < books.size(); lcv++){
             if (books.get(lcv).compareTo(book) <= 0) {
                 books.add(lcv, book);
-                System.out.println("Book added successfully.");
+                System.out.println("Book added successfully.\n");
                 return;
             }
         }
-        System.out.println("Book added unsuccessfully.");
+        System.out.println("Book added unsuccessfully.\n");
     }
     @Override
     public void removeBook(String isbn) {
         int index = findIndexOfISBN(isbn);
         if (index != -1) {
             books.remove(index);
-            System.out.println("Book removed successfully.");
+            System.out.println("Book removed successfully.\n");
             return;
         }
-        System.out.println("Book removed unsuccessfully.");
+        System.out.println("Book removed unsuccessfully.\n");
     }
 
     @Override
     public void addPatron(Patron patron) {
         patrons.add(patron);
-        System.out.println("Patron added successfully.");
+        System.out.println("Patron added successfully.\n");
     }
 
     @Override
@@ -60,9 +60,9 @@ public class Library implements LibrarySystem {
         if (checkoutBook(isbn, patronId)){
             Transaction tran = new Transaction(isbn, patronId, checkoutDate);
             transactions.add(tran);
-            System.out.println("Book checked out successfully.");
+            System.out.println("Book checked out successfully.\n");
         } else {
-            System.out.println("Book checked out unsuccessful.");
+            System.out.println("Book checked out unsuccessful.\n");
         }
     }
 
@@ -70,10 +70,10 @@ public class Library implements LibrarySystem {
     public void updateTransaction(String isbn, String patronId, String returnDate) {
         if (checkinBook(isbn, patronId)) {
             transactions.get(findIndexOfISBNTrans(isbn)).setReturnDate(returnDate);
-            System.out.println("Book checked in successful.");
+            System.out.println("Book checked in successful.\n");
         }
         else
-            System.out.println("Book checked in unsuccessful.");
+            System.out.println("Book checked in unsuccessful.\n");
     }
     // Other methods...
 
@@ -81,11 +81,11 @@ public class Library implements LibrarySystem {
     public void viewMostRecentTransaction(String isbn) {
         for (int lcv = transactions.size()-1; lcv >= 0; lcv--){
             if (transactions.get(lcv).getIsbn().equals(isbn)){
-                System.out.println("Book Found: " + transactions.get(lcv));
+                System.out.println("Book Found: " + transactions.get(lcv) + "\n");
                 return;
             }
         }
-        System.out.println("Book Not Found");
+        System.out.println("Book Not Found\n");
     }
 
     @Override
