@@ -108,8 +108,6 @@ public class LibraryManager {
             else if (chose == 8){
                 System.out.println("Exiting...");
                 return;
-            } else if (chose == 154){
-                library.printPatrons();
             }
             else
                 System.out.println("Invalid input");
